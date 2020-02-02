@@ -30,6 +30,16 @@ namespace OdeToFood.Data
             return 0;
         }
 
+        public Restaurant Delete(int Id)
+        {
+            var restaurant = GetByID(Id);
+            if (restaurant!=null)
+            {
+                Restaurants.Remove(restaurant);
+            }
+            return restaurant;
+        }
+
         public Restaurant GetByID(int Id)
         {
             return Restaurants.SingleOrDefault(c => c.Id == Id);
