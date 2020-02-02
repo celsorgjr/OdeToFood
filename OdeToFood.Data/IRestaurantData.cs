@@ -9,6 +9,7 @@ namespace OdeToFood.Data
         Restaurant GetByID(int Id);
         Restaurant Update(Restaurant UpdateRestaurant);
         Restaurant Add(Restaurant newRestaurant);
+        Restaurant Delete(int Id);
         int Commit();
     }
 }
